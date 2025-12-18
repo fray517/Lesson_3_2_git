@@ -17,9 +17,29 @@ def celsius_to_fahrenheit(celsius: float) -> float:
     return fahrenheit
 
 
+def fahrenheit_to_celsius(fahrenheit: float) -> float:
+    """
+    Преобразует температуру из градусов Фаренгейта в градусы Цельсия.
+
+    Формула: C = (F - 32) * 5/9
+
+    Args:
+        fahrenheit: Температура в градусах Фаренгейта.
+
+    Returns:
+        Температура в градусах Цельсия.
+    """
+    celsius = (fahrenheit - 32) * 5 / 9
+    return celsius
+
+
 if __name__ == '__main__':
     # Пример использования
     temp_c = 25.0
     temp_f = celsius_to_fahrenheit(temp_c)
     print(f'{temp_c}°C = {temp_f}°F')
+
+    temp_f2 = 77.0
+    temp_c2 = fahrenheit_to_celsius(temp_f2)
+    print(f'{temp_f2}°F = {temp_c2}°C')
 
